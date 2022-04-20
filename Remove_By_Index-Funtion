@@ -1,0 +1,5 @@
+RemoveItemFromList: {[list;indices]
+        indices: asc indices;
+        indices: +[indices;neg[til count indices]];    /Adjusting the list of indices to handle a removal at each iteration
+        {neg[y] rotate (1_y rotate x)}/[list; indices]
+        }
